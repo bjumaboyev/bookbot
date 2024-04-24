@@ -28,14 +28,13 @@ def sort_dict(char_dict):
     sorted_list.sort(reverse=True, key=sort_on)
     return sorted_list
 
-def main():
-    path = "books/frankenstein.txt"
+def main(path = "books/frankenstein.txt"):
     text = read_book(path)
     num_words = word_count(text)
     char_dict = count_letters(text)
     sorted_list = sort_dict(char_dict)
     
-    print("--- Begin report of books/frankstein.txt ---")
+    print(f"--- Begin report of {path} ---")
     print(f"{num_words} words found in the document\n")
     
     for i in sorted_list:
